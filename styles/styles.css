@@ -60,6 +60,7 @@ body {
   margin-bottom: 2.7rem;
   color: var(--gray);
   text-align: center;
+  font-size: var(--fs-medium);
 }
 
 /* APP HEADER */

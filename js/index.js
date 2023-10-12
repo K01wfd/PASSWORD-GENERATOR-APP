@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   // main form
   mainForm.addEventListener('submit', (ev) => {
+    passwordField.classList.remove('available');
     indicators.forEach((indicator) => (indicator.style.background = 'none'));
     copiedLabel.classList.remove('showCopied');
     ev.preventDefault();
@@ -52,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
       titleAlert.textContent =
         'Please increas the length or chose at least one option';
     } else {
+      passwordField.classList.add('available');
       titleAlert.textContent = 'Password Generator';
       passwordField.value = passwordGenerated;
       let passwordStrength = checkStrength(passwordGenerated, passwordLength);
