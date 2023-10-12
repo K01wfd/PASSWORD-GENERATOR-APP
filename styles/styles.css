@@ -19,17 +19,17 @@ html {
   --strong-color: #a4ffaf;
 
   /* TYPOGRAPHY */
-  --fs-large: 3.2rem;
-  --fs-medium: 2.4rem;
-  --fs-small: 1.8rem;
+  --fs-large: 3.1rem;
+  --fs-medium: 2.2rem;
+  --fs-small: 1.7rem;
   --ff-main: 'JetBrains Mono', monospace;
 }
 
 @media screen and (max-width: 480px) {
   :root {
-    --fs-large: 2.4rem;
-    --fs-medium: 1.8rem;
-    --fs-small: 1.6rem;
+    --fs-large: 2rem;
+    --fs-medium: 1.56rem;
+    --fs-small: 1.5rem;
   }
 }
 
@@ -40,7 +40,7 @@ body {
   font-size: var(--fs-small);
   font-weight: 700;
   font-family: var(--ff-main);
-  min-height: 100vh;
+  padding: 1rem;
 }
 
 .container {
@@ -49,17 +49,17 @@ body {
 }
 
 .app-wrapper {
-  width: 100%;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  justify-content: center;
+  padding: 2rem 0;
 }
 /* MAIN HEADER */
 .main-header {
-  margin-bottom: 2.7rem;
+  margin-bottom: 2rem;
   color: var(--gray);
   text-align: center;
+}
+.main-header h1 {
   font-size: var(--fs-medium);
 }
 
@@ -114,13 +114,13 @@ body {
 /* APP BODY */
 .app-body {
   background-color: var(--dark-gray);
-  padding: 3.9rem 3.2rem;
+  padding: 3.4rem 3.2rem 2rem;
 }
 
 /* PASSWORD LENGTH PROPERTIES */
 .length-group {
   display: flex;
-  margin-bottom: 3.5rem;
+  margin-bottom: 3.2rem;
 }
 .length-value {
   font-size: var(--fs-large);
@@ -128,7 +128,7 @@ body {
 }
 .slider-group input {
   width: 100%;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
   -webkit-appearance: none;
   --moz-appearance: none;
   appearance: none;
@@ -182,7 +182,7 @@ input[type='range']:hover::-moz-range-thumb {
 
 /* CHECKBOX OPTIONS */
 .check-group > * + * {
-  margin-top: 1.9rem;
+  margin-top: 1.7rem;
 }
 .check-group label {
   margin-left: 1.5rem;
@@ -231,7 +231,7 @@ input[type='checkbox']:checked::before {
   margin-top: 3.1rem;
   background-color: var(--bg-dark);
   padding: 2.5rem 3.2rem;
-  margin-bottom: 3.2rem;
+  margin-bottom: 2.5rem;
 }
 .strength-label {
   color: var(--gray);
@@ -240,7 +240,6 @@ input[type='checkbox']:checked::before {
 .indicators-aria {
   display: flex;
   align-items: center;
-  gap: 0.7rem;
 }
 .indicators-label {
   text-transform: uppercase;
@@ -251,6 +250,7 @@ input[type='checkbox']:checked::before {
   width: 10px;
   height: 28px;
   border: 1px solid var(--white);
+  margin-left: 0.5rem;
 }
 
 /* GENERATE PASSWORD BUTTON */
@@ -283,6 +283,9 @@ input[type='checkbox']:checked::before {
   justify-content: space-between;
 }
 @media screen and (max-width: 480px) {
+  body {
+    padding: 0;
+  }
   .container {
     padding: 1.6rem;
   }

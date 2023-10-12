@@ -29,11 +29,10 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshots/desktop-active.png)
 ![](./screenshots/desktop.png)
-![](./screenshots/mobile-active-1.png)
-![](./screenshots/mobile-copied.png)
-![](./screenshots/mobile-error.png)
+![](./screenshots/desktop-active.png)
+![](./screenshots/mobile-active.png)
+![](./screenshots/mobile.png)
 ![](./screenshots/tablet.png)
 
 ## My process

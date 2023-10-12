@@ -187,41 +187,51 @@ function checkStrength(password, length) {
         strenegth += 1;
       }
     });
-    if (length < 8) {
-      if (strenegth < 3) {
-        strenegth = 1;
-      } else {
-        strenegth = 2;
-      }
-    }
-    if (length >= 8 && length < 10) {
-      if (strenegth < 3) {
-        strenegth = 1;
-      } else if (strenegth === 3) {
-        strenegth = 1;
-      } else {
-        strenegth = 2;
-      }
-    }
-    if (length >= 10 && length < 12) {
-      if (strenegth < 3) {
-        strenegth = 1;
-      } else if (strenegth === 3) {
-        strenegth = 2;
-      } else {
-        strenegth = 3;
-      }
-    }
-    if (length >= 12) {
-      if (strenegth < 3) {
-        strenegth = 2;
-      } else if (strenegth === 3) {
-        strenegth = 3;
-      } else {
-        strenegth = 4;
-      }
-    }
   }
-
-  return strenegth;
+  if (length < 8) {
+    if (strenegth < 3) {
+      strenegth = 1;
+    } else {
+      strenegth = 2;
+    }
+    return strenegth;
+  }
+  if (length >= 8 && length < 10) {
+    if (strenegth < 3) {
+      strenegth = 1;
+    } else if (strenegth === 3) {
+      strenegth = 2;
+    } else {
+      strenegth = 3;
+    }
+    return strenegth;
+  }
+  if (length >= 10 && length < 12) {
+    if (strenegth < 3) {
+      strenegth = 2;
+    } else if (strenegth === 3) {
+      strenegth = 3;
+    } else {
+      strenegth = 4;
+    }
+    return strenegth;
+  }
+  if (length == 12) {
+    if (strenegth < 3) {
+      strenegth = 2;
+    } else if (strenegth >= 3) {
+      strenegth = 4;
+    }
+    return strenegth;
+  }
+  if (length > 12) {
+    if (strenegth < 3) {
+      strenegth = 2;
+    } else if (strenegth === 3) {
+      strenegth = 3;
+    } else {
+      strenegth = 4;
+    }
+    return strenegth;
+  }
 }
