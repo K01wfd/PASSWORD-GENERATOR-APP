@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Password generator app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <div class="app-wrapper">
+        <div class="main-header">
+          <p class="title">Password Generator</p>
+        </div>
+        <div class="app-header">
+          <input
+            type="text"
+            disabled
+            class="password"
+            placeholder="P4$5W0rD!"
+            value=""
+          />
+          <div class="copy-aria">
+            <span class="copy-label">COPIED</span>
+            <span>
+              <svg class="copy-icon">
+                <use xlink:href="assets/images/sprites.svg#icon-copy"></use>
+              </svg>
+            </span>
+          </div>
+        </div>
+        <div class="app-body">
+          <form id="main-form">
+            <!-- GROUP -->
+            <div class="length-group space-between">
+              <label for="char-length">Character Length</label>
+              <p class="length-value">0</p>
+            </div>
+            <!-- GROUP -->
+            <div class="slider-group">
+              <input
+                type="range"
+                value="0"
+                min="4"
+                step="2"
+                max="14"
+                id="char-length"
+              />
+            </div>
+            <!-- GROUP -->
+            <div class="check-group">
+              <div>
+                <input type="checkbox" name="uppercase" id="uppercase" />
+                <label for="uppercase">Include Uppercase Letters</label>
+              </div>
+              <div>
+                <input type="checkbox" name="lowercase" id="lowercase" />
+                <label for="lowercase">Include Lowercase Letters</label>
+              </div>
+              <div>
+                <input type="checkbox" name="numberChar" id="numbers" />
+                <label for="numbers">Include Numbers</label>
+              </div>
+              <div>
+                <input type="checkbox" name="symbol" id="symbols" />
+                <label for="symbols">Include Symbols</label>
+              </div>
+            </div>
+            <!-- GROUP -->
+            <div class="strenght-group">
+              <p class="strength-label">Strength</p>
+              <div class="indicators-aria">
+                <span class="indicators-label">Medium</span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+                <span class="indicator"></span>
+              </div>
+            </div>
+            <!-- GROUP -->
+            <button class="btn">
+              Generate
+              <svg class="arrow-icon">
+                <use
+                  xlink:href="assets/images/sprites.svg#icon-arrow-right"
+                ></use>
+              </svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <script src="js/index.js"></script>
+  </body>
+</html>
